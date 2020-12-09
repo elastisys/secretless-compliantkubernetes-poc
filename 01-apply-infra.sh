@@ -21,7 +21,7 @@ export TF_VAR_floatingip_pool="public-v4"
 export TF_VAR_network_name=$CLUSTER_NAME
 
 # Elastisys Lomma and Elastisys HQ
-export TF_VAR_k8s_allowed_remote_ips='["90.224.48.115", "194.132.164.168"]'
+export TF_VAR_k8s_allowed_remote_ips='["90.224.48.115/32", "194.132.164.168/32"]'
 
 export TF_VAR_image="ubuntu-20.40-server-cloudimg-amd64-20200423"
 
