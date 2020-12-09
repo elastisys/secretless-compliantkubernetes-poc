@@ -1,5 +1,5 @@
 [submodule "kubespray"]
 	path = kubespray
 	url = git@github.com:cristiklein/kubespray.git
-	branch = release-2.14
+	branch = release-2.14-ck
     shallow = true
