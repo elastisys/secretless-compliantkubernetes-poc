@@ -1,63 +1,24 @@
-# NOTE: This file is currently unused. See ./01-apply-infra.sh
+cluster_name="ck-secretless"
 
-# your Kubernetes cluster name here
-cluster_name = "i-didnt-read-the-docs"
+external_net="71b10496-2617-47ae-abbc-36239f0863bb" # public-v4
+floatingip_pool="public-v4"
+network_name="ck-secretless"
+dns_nameservers=["8.8.4.4", "8.8.8.8"]
 
-# list of availability zones available in your OpenStack cluster
-#az_list = ["nova"]
+# Elastisys Lomma and Elastisys HQ
+k8s_allowed_remote_ips=["90.224.48.115/32", "194.132.164.168/32"]
 
-# SSH key to use for access to nodes
-public_key_path = "~/.ssh/id_rsa.pub"
+image="ubuntu-20.40-server-cloudimg-amd64-20200423"
 
-# image to use for bastion, masters, standalone etcd instances, and nodes
-image = "<image name>"
+flavor_k8s_master="1493be98-d150-4f69-8154-4d59ea49681c" # b.small
+flavor_k8s_node="1493be98-d150-4f69-8154-4d59ea49681c" # b.small
 
-# user on the node (ex. core on Container Linux, ubuntu on Ubuntu, etc.)
-ssh_user = "<cloud-provisioned user>"
-
-# 0|1 bastion nodes
-number_of_bastions = 0
-
-#flavor_bastion = "<UUID>"
-
-# standalone etcds
-number_of_etcd = 0
-
-# masters
-number_of_k8s_masters = 1
-
-number_of_k8s_masters_no_etcd = 0
-
-number_of_k8s_masters_no_floating_ip = 0
-
-number_of_k8s_masters_no_floating_ip_no_etcd = 0
-
-flavor_k8s_master = "<UUID>"
-
-# nodes
-number_of_k8s_nodes = 2
-
-number_of_k8s_nodes_no_floating_ip = 4
-
-#flavor_k8s_node = "<UUID>"
-
-# GlusterFS
-# either 0 or more than one
-#number_of_gfs_nodes_no_floating_ip = 0
-#gfs_volume_size_in_gb = 150
-# Container Linux does not support GlusterFS
-#image_gfs = "<image name>"
-# May be different from other nodes
-#ssh_user_gfs = "ubuntu"
-#flavor_gfs_node = "<UUID>"
-
-# networking
-network_name = "<network>"
-
-external_net = "<UUID>"
-
-subnet_cidr = "<cidr>"
-
-floatingip_pool = "<pool>"
-
-bastion_allowed_remote_ips = ["0.0.0.0/0"]
+az_list=["se-east-1"]
+az_list_node=["se-east-1"]
+number_of_bastions=0
+number_of_k8s_masters=1
+number_of_k8s_masters_no_etcd=0
+number_of_etcd=0
+number_of_k8s_masters_no_floating_ip=0
+number_of_k8s_masters_no_floating_ip_no_etcd=0
+number_of_k8s_nodes_no_floating_ip=0

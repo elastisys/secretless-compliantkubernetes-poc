@@ -12,5 +12,5 @@ TF_BASE_DIR=$(dirname $0)/inventory/$CLUSTER_NAME
 
 pushd $TF_BASE_DIR
 TF_DIR=../../kubespray/contrib/terraform/openstack
-terraform destroy $TF_DIR # TODO: consider using -var-file=cluster.tfvars
+terraform destroy -var-file=cluster.tfvars $TF_DIR
 popd
