@@ -22,6 +22,9 @@ export TF_VAR_external_net="71b10496-2617-47ae-abbc-36239f0863bb" # public-v4
 export TF_VAR_floatingip_pool="public-v4"
 export TF_VAR_network_name=$TF_VAR_cluster_name # Would have been cool to have as default in upstream kubespray
 
+# Elastisys Lomma and Elastisys HQ
+export TF_VAR_k8s_allowed_remote_ips='["90.224.48.115", "194.132.164.168"]'
+
 export TF_VAR_image="ubuntu-20.40-server-cloudimg-amd64-20200423"
 
 export TF_VAR_flavor_k8s_master="1493be98-d150-4f69-8154-4d59ea49681c" # b.small
