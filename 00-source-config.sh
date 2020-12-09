@@ -6,4 +6,4 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     exit 1
 fi
 
-export CLUSTER_NAME=sc.ck-secretless-poc.elastisys.se
+export CLUSTER_NAME=ck-secretless

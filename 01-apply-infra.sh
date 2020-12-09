@@ -15,12 +15,10 @@ export OS_PROJECT_ID="add72b7b2ed644a8842b1784dbdf275f"
 export OS_USER_DOMAIN_NAME="elastisys.se"
 export OS_PROJECT_DOMAIN_NAME="elastisys.se"
 
-# Nova does not like dot in certain places
-export TF_VAR_cluster_name=$(echo $CLUSTER_NAME | tr '.' '_')
-
+export TF_VAR_cluster_name=$CLUSTER_NAME
 export TF_VAR_external_net="71b10496-2617-47ae-abbc-36239f0863bb" # public-v4
 export TF_VAR_floatingip_pool="public-v4"
-export TF_VAR_network_name=$TF_VAR_cluster_name # Would have been cool to have as default in upstream kubespray
+export TF_VAR_network_name=$CLUSTER_NAME
 
 # Elastisys Lomma and Elastisys HQ
 export TF_VAR_k8s_allowed_remote_ips='["90.224.48.115", "194.132.164.168"]'
