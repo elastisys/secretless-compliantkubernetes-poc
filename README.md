@@ -11,6 +11,7 @@ Misc:
 * [bash](https://www.gnu.org/software/bash/) >4
 * [git](https://git-scm.com/downloads)
 * [jq](https://stedolan.github.io/jq/)
+* [yq](https://github.com/mikefarah/yq)
 
 Infrastructure setup:
 
