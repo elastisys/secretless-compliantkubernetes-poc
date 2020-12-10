@@ -28,5 +28,5 @@ ansible-playbook \
 
 echo
 echo "Consider rebooting CSI Cinder:"
-echo "    kubectl -n kube-system delete pods -l app=csi-cinder-controllerplugin"
-echo "    kubectl -n kube-system delete pods -l app=csi-cinder-nodeplugin"
+echo "    kubectl --context ${CLUSTER_NAME} --namespace kube-system delete pods -l app=csi-cinder-controllerplugin"
+echo "    kubectl --context ${CLUSTER_NAME} --namespace kube-system delete pods -l app=csi-cinder-nodeplugin"
