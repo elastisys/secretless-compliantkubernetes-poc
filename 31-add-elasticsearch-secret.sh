@@ -12,7 +12,11 @@ kubectl apply -f - <<EOF
 apiVersion: v1
 kind: Secret
 metadata:
+  namespace: kube-system
   name: elasticsearch-password
+  labels:
+    app: fire-and-forget-secrets
+    controlled-by: $(basename $0)
 stringData:
   password: $ELASTICSEARCH_PASSWORD
 EOF
