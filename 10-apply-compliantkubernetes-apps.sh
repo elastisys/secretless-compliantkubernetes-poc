@@ -20,3 +20,6 @@ helm \
     --install \
     apps \
     apps
+
+echo
+echo "NOTE: Don't forget to create an Elasticsearch secret in the next step."
