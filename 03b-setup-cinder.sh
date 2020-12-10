@@ -14,8 +14,8 @@ export OS_PROJECT_ID="add72b7b2ed644a8842b1784dbdf275f"
 export OS_USER_DOMAIN_NAME="elastisys.se"
 export OS_PROJECT_DOMAIN_NAME="elastisys.se"
 export OS_REGION_NAME=se-east-1
-export OS_USERNAME=CINDER_OS_USERNAME
-export OS_PASSWORD=CINDER_OS_PASSWORD
+export OS_USERNAME=$CINDER_OS_USERNAME
+export OS_PASSWORD=$CINDER_OS_PASSWORD
 
 ansible-playbook \
     -i inventory/$CLUSTER_NAME/hosts \
