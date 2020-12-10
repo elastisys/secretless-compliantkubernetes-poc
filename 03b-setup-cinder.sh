@@ -24,3 +24,8 @@ ansible-playbook \
     -e cinder_csi_enabled=1 \
     -t cinder-csi-driver \
     kubespray/cluster.yml
+
+echo
+echo "Consider rebooting CSI Cinder:"
+echo "    kubectl -n kube-system delete pods -l app=csi-cinder-controllerplugin"
+echo "    kubectl -n kube-system delete pods -l app=csi-cinder-nodeplugin"
