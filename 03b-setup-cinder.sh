@@ -22,6 +22,7 @@ ansible-playbook \
     --become \
     --become-user=root \
     -e cinder_csi_enabled=1 \
+    -e cinder_blockstorage_version=v2 \
     -t cinder-csi-driver \
     kubespray/cluster.yml
 
