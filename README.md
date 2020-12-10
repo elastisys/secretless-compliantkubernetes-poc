@@ -36,12 +36,12 @@ Start with:
 
 The repo is logically split in the following phases:
 
-0. Configuration
-1. Infrastructure Setup
-2. Kubernetes Setup
-3. Kubernetes Apps Setup
-8. Disaster Recovery
-9. Teardown
+* 00-09: Configuration
+* 10-19: Infrastructure Setup
+* 20-29: Kubernetes Setup
+* 30-39: Kubernetes Apps Setup
+* 80-89: Disaster Recovery
+* 90-99: Teardown
 
 Each phase is encoded via a `${PHASE_ID}*.sh` script. For example, configuration is encoded in `00-source-config.sh`.
 
