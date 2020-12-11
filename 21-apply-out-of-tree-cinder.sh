@@ -2,6 +2,9 @@
 
 set -e
 
+echo "SafeSpring does not support Cinder v3. You MUST use the legacy OpenStack cloud provider."
+exit 1
+
 : ${CLUSTER_NAME:?"Please set CLUSTER_NAME"}
 
 # We force the user to use CINDER_* variables to remind them that these should
