@@ -5,7 +5,7 @@ fluentd-elasticsearch:
     scheme: "https"
     auth:
       enabled: true
-      username: fluentd
+      user: fluentd
       password: ""
   secret:
     - name: OUTPUT_PASSWORD
