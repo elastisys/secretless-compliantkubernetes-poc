@@ -47,3 +47,7 @@ The repo is logically split in the following phases:
 Each phase is encoded via a `${PHASE_ID}*.sh` script. For example, configuration is encoded in `00-source-config.sh`.
 
 You are supposed to execute each script one after another, sorted by name. Follow the instructions of each script.
+
+## TODO
+
+* Script to add public SSH keys.
