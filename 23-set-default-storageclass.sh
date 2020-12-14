@@ -4,7 +4,7 @@ set -e
 
 : ${CLUSTER_NAME:?"Please set CLUSTER_NAME"}
 
-kubectl apply -f - <<EOF
+kubectl apply --context $CLUSTER_NAME -f - <<EOF
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:

@@ -11,4 +11,8 @@ set -e
 #
 # https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/#avoiding-operating-on-the-kube-system-namespace
 
-kubectl label namespace kube-system control-plane="true" --overwrite=true
+kubectl \
+    --context $CLUSTER_NAME \
+    label namespace kube-system \
+    control-plane="true" \
+    --overwrite=true
